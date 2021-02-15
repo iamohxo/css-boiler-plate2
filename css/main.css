@@ -14,3 +14,62 @@ button, input {
 .wrap {
     font: 15px "Noto Sans KR" , sans-serif;
 }
+
+/* header */
+header {
+    width: 100%;
+    /* background: red; */
+    position: fixed;
+}
+
+header .inner-header {
+    background: orange;
+    width: 92%;
+    height: 120px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner-header .logo {
+    background: greenyellow;
+    flex: 1;
+}
+
+header .inner-header .logo a {
+    display: block;
+    width: 100%;
+}
+
+header .inner-header .logo a img {
+    height: 60px;
+}
+
+header .inner-header .intro-text {
+    background: tomato;
+    flex: 4;
+    margin-left: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .inner-header .menu-open {
+    background: skyblue;
+    flex: 1;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .inner-header .menu-open .lnr-menu {
+    display: block;
+    font-size: 33px;
+    margin-left: 15px;
+}
