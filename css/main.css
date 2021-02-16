@@ -96,7 +96,7 @@ section.visual .slide li .txt {
     position: absolute;
     left: 10%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translatey(-50%);
 
     color: #fff;
     font-size: 18px;
@@ -129,4 +129,260 @@ section.visual .slide li .scroll {
     font-weight: 700;
 
     transform: rotate(-90deg);
+}
+
+/* section contents */
+section.contents {
+    background: #1b1b1b;
+    padding: 120px 0;
+}
+
+/* section contents > .main-text */
+section.contents .main-text {
+    /* background: yellow; */
+    width: 1170px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 25px;
+
+    display: flex;
+    position: relative;
+}
+
+section.contents .main-text::before {
+    content: "";
+    background: #ffec03;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 70px;
+    top: 130px;
+}
+
+section.contents .main-text::after {
+    content: "”";
+    font-size: 300px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+section.contents .main-text h3 {
+    /* background: red; */
+    flex: 1;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section.contents .main-text p {
+    /* background: blue; */
+    flex: 1.5;
+    line-height: 1.4;
+}
+
+section.contents .main-text p span {
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #999;
+}
+
+/* section contents > .project */
+section.contents .project {
+    color: #fff;
+}
+
+section.contents .project .top {
+    width: 1170px;
+    margin: 130px auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contents .project .top h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+section.contents .project .top a {
+    display: block;
+    font-size: 18px;
+}
+section.contents .project .top a span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+section.contents .project ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.contents .project ul li {
+    height: 400px;   
+    position: relative;
+}
+
+section.contents .project ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a img {
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a .name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    background: #1b1b1b;
+    padding: 15px;
+    width: 250px;
+    text-align: right;
+    font-size: 22px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+
+section.contents .project ul li a:hover .name {
+    opacity: 1;
+    animation: title-rise-up 1s;
+}
+@keyframes title-rise-up {
+    0% {
+        opacity: 0;
+        bottom: -10%;
+    }
+    100% {
+        opacity: 1;
+        bottom: 10px;
+    }
+}
+
+section.contents .project ul li a .name span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+section.contents .project ul li a .name h3 {
+    text-transform: uppercase;
+}
+
+section.contents .project ul li a::before {
+    content: "";
+    background: rgba(27,27,27, .9);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.6s;
+}
+
+section.contents .project ul li a:hover::before {
+    width: 100%;
+}
+
+/* section contents > .partner */
+section.contents .partner {
+    width: 1170px;
+    margin: 170px auto 100px;
+    color: #fff;
+}
+
+section.contents .partner h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+section.contents .partner ul {
+    /* background: tomato; */
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section.contents .partner ul li img {
+    opacity: 0.4;
+    transition: .3s;
+}
+
+section.contents .partner ul li:hover img {
+    opacity: 1;
+}
+
+/* section contents .contact */
+section.contents .contact {
+    width: 90%;
+    background: url('../img/contact.jpg') no-repeat center/cover fixed;
+    padding: 220px 0;
+    color: #fff;
+}
+
+section.contents .contact .inner {
+    width: 1170px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.1;
+}
+
+section.contents .contact .inner h3 {
+    font-weight: 400;
+}
+
+section.contents .contact .inner .tel {
+    font-size: 55px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+/* footer */
+footer {
+    background: #1b1b1b;
+    color: #999;
+    padding: 0 80px 80px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul li:nth-child(2) {
+    color: #eee;
+    font-size: 16px;
+    line-height: 2;
+}
+
+footer ul li:nth-child(2) span {
+    font-weight: 700;
+    margin-right: 10px;
+    color: #999;
+}
+
+footer ul li:nth-child(3) {
+    font-weight: 700;
+}
+
+footer .go-top {
+    color: #fff;
+    font-size: 50px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
 }
