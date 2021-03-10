@@ -37,11 +37,28 @@
     <!-- https://linearicons.com/free#cdn -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
+    <!-- animate css || https://animate.style -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- slick css || https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="css/slick.css">
+
     <!-- custom css -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- libraries -->
+    <!-- scrolla js -->
+    <script src="js/scrolla.jquery.min.js" defer></script>
+    <!-- slick js -->
+    <script src="js/slick.min.js" defer></script>
+
     <!-- custom js -->
+    <script src="js/config.js" defer></script>
     <script src="js/gnb-event.js" defer></script>
+    <script src="js/scroll-event.js" defer></script>
 </head>
 <body>
     
@@ -91,6 +108,51 @@
                     </div>
                     <span class="scroll">Scroll down</span>
                 </li>
+                <li>
+                    <img src="img/visual2.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>Creative design with Hong Studio</p>
+                        <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>
+                        <a href="#">See the work <span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual3.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>Creative design with Hong Studio</p>
+                        <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>
+                        <a href="#">See the work <span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual4.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>Creative design with Hong Studio</p>
+                        <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>
+                        <a href="#">See the work <span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual5.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>Creative design with Hong Studio</p>
+                        <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>
+                        <a href="#">See the work <span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual6.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>Creative design with Hong Studio</p>
+                        <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>
+                        <a href="#">See the work <span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
             </ul>
         </section>
         <!-- //section visual -->
@@ -98,7 +160,7 @@
          <!--  section contents   -->
          <section class="contents">
             <!-- section contents main-text -->
-            <div class="main-text">
+            <div class="main-text animate" data-animate="fadeInUp" data-duration="1s">
                 <h3>Great experience <br> build great brands.</h3>
                 <p>다양한 온라인 서비스들을 구축하고 운영해온 풍부한 경험으로<br class="mo">
                     UI/UX 기획과 디자인 그리고 구축에서 운영까지, 우리 스튜디오는<br class="mo">
@@ -112,12 +174,12 @@
             <!-- section contents > .project -->
             <div class="project">
                 <div class="top">
-                    <h3>Meet <br>Out Projects</h3>
+                    <h3 class="animate" data-animate="fadeInLeft" data-duration="1s" data-delay="0.5s">Meet <br>Out Projects</h3>
                     <a href="#">More Projects
                         <span class="lnr lnr-chevron-right"></span>
                     </a>
                 </div>
-                <ul>
+                <ul class="animate" data-animate="fadeInUp" data-duration="1s">
                     <li>
                         <a href="#">
                             <img src="img/project1.jpg" alt="project1">
@@ -161,7 +223,7 @@
             <!-- section contents > .partner -->
             <div class="partner">
                 <h3>우리의 소중한 고객입니다.</h3>
-                <ul>
+                <ul class="animate" data-animate="fadeInRight" data-duration="1s" data-delay="0.4s">
                     <li><img src="img/partner1.png" alt=""></li>
                     <li><img src="img/partner2.png" alt=""></li>
                     <li><img src="img/partner3.png" alt=""></li>
@@ -174,7 +236,7 @@
             </div>
 
             <!-- section contents > .contact -->
-            <div class="contact">
+            <div class="contact animate" data-animate="fadeIn" data-duration="2s" data-delay="0.5s">
                 <div class="inner">
                     <h3>당신의 프로젝트를 이야기해 주세요.</h3>
                     <p class="tel">010.1234.1234</p>
@@ -195,7 +257,7 @@
                 </li>
                 <li> &#xa9 Hong Studio 2021 <br>All Rights Reseved</li>
             </ul>
-            <a href="#top" class="go-top"><span class="lnr lnr-arrow-up"></span></a>
+            <a href="#top" class="go-top hide"><span class="lnr lnr-arrow-up"></span></a>
         </footer>
         <!-- //footer-->
     </div>

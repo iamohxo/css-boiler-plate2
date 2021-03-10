@@ -15,12 +15,22 @@ button, input {
     font: 15px "Noto Sans KR" , sans-serif;
 }
 
+.hide {
+    display: none !important;
+
+}
+
 /* header */
 header {
     width: 100%;
     /* background: red; */
     position: fixed;
     z-index: 20;
+}
+
+header.on {
+    background: #222;
+    border-bottom: 1px solid #2c2c2c;
 }
 
 header .inner-header {
@@ -172,6 +182,100 @@ section.visual .slide li .scroll {
     font-weight: 700;
 
     transform: rotate(-90deg);
+}
+
+/* slick 이전 다음 버튼 스타일 변경 */
+.slick-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    border: none;
+    z-index: 5;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+    bottom: 60px;
+}
+
+.slick-arrow::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #888;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    text-indent: 0;
+    font-weight: 300;
+}
+
+.slick-arrow.slick-next::after {
+    content: '>';
+}
+.slick-arrow.slick-prev::after {
+    content: '<';
+}
+
+.slick-arrow:hover {
+    background: #cccccc;
+    transform: all .5s;
+}
+
+.slick-arrow:hover::after {
+    font-size: 28px;
+    color: #333333;
+    transition: all .2s;
+}
+
+.slick-active .txt p {
+    animation: txt1 .8s;
+}
+@keyframes txt1 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(-150px); }
+    20% {opacity: 0; transform: rotateX(180deg) translateY(-150px); }
+    100% {opacity: 1; transform: rotateX(0) translateY(0); }
+}
+
+.slick-active .txt a {
+    animation: txt2 .8s;
+}
+@keyframes txt2 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(150px); }
+    20% {opacity: 0; transform: rotateX(180deg) translateY(150px); }
+    100% {opacity: 1; transform: rotateX(0) translateY(0); }
+}
+
+.slick-active .txt h3 {
+    animation: txt3 .7s;
+}
+@keyframes txt3 {
+    0% {transform: translateX(0); }
+    40% {transform: translateX(-50px); }
+    100% {transform: translateX(0); }
+}
+
+.slick-active .scroll {
+    animation: scroll 1s;
+}
+@keyframes scroll {
+    0% {opacity: 0; left: -100px; }
+    30% {opacity: 0; left: -100px; }
+    100% {opacity: 1; left: 50px; }
+}
+
+section.visual .slick-active img {
+    animation: img 1s;
+}
+@keyframes img {
+    0% {opacity: 0; left: -80px; transform: scale(0.95) }
+    100% {opacity: 1; left: 0; }
 }
 
 /* section contents */
